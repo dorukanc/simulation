@@ -14,4 +14,20 @@ The provided Python script simulates the failure and repair process of a machine
 
 ```bash
 python simulation.py
+```
 
+### Simulation Parameters
+- `machine_count`: Number of machines in the system.
+- `repair_time`: Time taken to repair a machine.
+- `simulation_time`: Duration of the simulation.
+
+## Simulation Output
+The script prints the following information for each time step:
+- Clock time.
+- Number of working machines (`SS`).
+- Time until the next failure (`NF`).
+- Time until the next repair (`NR`).
+- Area under the uptime curve (`Area Under S`).
+
+## License
+This code is provided under the [MIT License](LICENSE).
