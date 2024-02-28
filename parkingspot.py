@@ -41,6 +41,10 @@ while clock <= 24:
     if next_departure_time < next_arrival_time:
         #departure event tbd
         clock = next_departure_time #advance to clock to earliest
+        system_state -= 1
+        print("Car departs at: ", clock)
+        fel_departures.remove(next_departure_time)
+
     else: 
         #arrival event
         clock = next_arrival_time
