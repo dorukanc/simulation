@@ -1,5 +1,11 @@
 import math
 import random
+import pandas as pd
+
+#created a empty data frame
+df = pd.DataFrame() 
+df['time'] = 0 # column names init
+df['System State'] = 0 #column names init
 
 #event generator
 #system state
@@ -31,7 +37,7 @@ clock = 0
 fel_arrivals = [0] #future event list arrivals
 fel_departures = [] #future event list departure
 
-while clock <= 24:
+while clock <= 120:
     next_arrival_time = min(fel_arrivals)
     if (len(fel_departures) > 0):
         next_departure_time = min(fel_departures)
@@ -42,14 +48,16 @@ while clock <= 24:
         #departure event tbd
         clock = next_departure_time #advance to clock to earliest
         system_state -= 1
-        print("Car departs at: ", clock)
+        #print("Car departs at: ", clock, " SS: ", system_state)
+        df.loc[len(df.index)] = [clock, system_state]
         fel_departures.remove(next_departure_time)
 
     else: 
         #arrival event
         clock = next_arrival_time
         system_state += 1 #increased the numbers of cars in the system
-        print("Car arrives at: ", clock)
+        #print("Car arrives at: ", clock, " SS: ", system_state)
+        df.loc[len(df.index)] = [clock, system_state]
         fel_arrivals.remove(next_arrival_time)
 
         #departure time of the current car
@@ -60,3 +68,5 @@ while clock <= 24:
 
         arrival_time = create_arrival(clock)
         fel_arrivals.append(arrival_time) #appended the arrival time to the list
+
+ax1 = df.plot.scatter(x='time', y='System State')
