@@ -1,6 +1,7 @@
 import math
 import random
 import pandas as pd
+import simpy
 
 #created a empty data frame
 df = pd.DataFrame() 
@@ -74,3 +75,31 @@ while clock <= 120:
 from matplotlib import pyplot as plt
 df.plot(kind='scatter', x='time', y='System State', s=32, alpha=.8)
 plt.gca().spines[['top', 'right',]].set_visible(False)
+
+#create a enviroment
+
+env = simpy.Environment()
+
+system_state = 0
+def add_car(env, id):
+    global system_state
+    #enter the parking lot
+    print("Car ", id, "arrives at time: ", env.now)
+    system_state += 1
+    #wait for some time
+    yield env.timeout(random.expovariate(1/avarage_service_time))
+    #leave the parking lot
+    system_state -= 1
+    print("Car ", id, "departs at time: ", env.now)
+
+def car_generator(env):
+    id = 0
+    while 1:
+        id += 1
+        # generate a new car, and everytime line runs, it adds new car to the system
+        env.process(add_car(env, id))
+        lambda_t = 100 + 10 * math.sin(math.pi * env.now / 12)
+        yield env.timeout(random.expovariate(lambda_t))
+
+env.process(car_generator(env))
+env.run(until = 24)
