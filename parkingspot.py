@@ -69,4 +69,8 @@ while clock <= 120:
         arrival_time = create_arrival(clock)
         fel_arrivals.append(arrival_time) #appended the arrival time to the list
 
-ax1 = df.plot.scatter(x='time', y='System State')
+# @title time vs System State
+
+from matplotlib import pyplot as plt
+df.plot(kind='scatter', x='time', y='System State', s=32, alpha=.8)
+plt.gca().spines[['top', 'right',]].set_visible(False)
