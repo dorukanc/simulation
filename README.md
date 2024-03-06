@@ -31,4 +31,4 @@ The `sys_state_simulation.py` script simulates the failure and repair process of
 
 ---
 
-created by dorukan
+created by dorukan xavier
