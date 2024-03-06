@@ -31,4 +31,4 @@ The `sys_state_simulation.py` script simulates the failure and repair process of
 
 ---
 
-Feel free to explore and utilize these scripts for simulation exercises in the IE304 Simulation class.
+created by dorukan
