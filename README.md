@@ -7,6 +7,7 @@ This repository contains Python scripts for simulation exercises conducted in th
 1. [Monte Carlo Simulation of π](#monte-carlo-simulation-of-π)
 2. [Parking Lot Simulation](#parking-lot-simulation)
 3. [Machine Failure and Repair Simulation](#machine-failure-and-repair-simulation)
+4. [Normal Distribution Simulation](#normal-distribution-simulation)
 
 ---
 
