@@ -31,4 +31,11 @@ The `sys_state_simulation.py` script simulates the failure and repair process of
 
 ---
 
+## Normal Distribution Simulation
+
+The `areaunderfunc_sim.py` script simulates the estimation of the area under a normal distribution curve using Monte Carlo simulation. It generates random points within a rectangle and calculates the ratio of points falling under the normal distribution curve to the total points. By multiplying this ratio by the area of the rectangle, it approximates the area under the curve. The script visualizes the points falling under the curve using Matplotlib.
+
+![Alt text](https://raw.githubusercontent.com/dorukanc/simulation/main/imgs/pointsunderfunction.png)
+
+
 Feel free to explore and utilize these scripts for simulation exercises in the IE304 Simulation class.
