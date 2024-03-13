@@ -24,9 +24,9 @@ area_rectangle = (b - a) * c
 # y is between 0 and c
 for i in range(interval):
 
-    # Generate rnd_x between 0 and 2
+    # Generate rnd_x between a and b
     rnd_x = a + (b - a) * random.random()
-    # Generate rnd_y between 0 and 1
+    # Generate rnd_y between 0 and c
     rnd_y = 0 + c * random.random()
 
     if rnd_y <= func(rnd_x):
