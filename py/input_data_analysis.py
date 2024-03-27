@@ -62,6 +62,15 @@ plt.tight_layout()
 # Display plot
 plt.show()
 
+# Display fitted parameters
+print("Fitted Parameters:")
+print(f"Normal Distribution:")
+print(f"  - Estimated mean (mu): {mu_normal:.2f}")
+print(f"  - Estimated standard deviation (sigma): {std_normal:.2f}")
+print(f"Exponential Distribution:")
+print(f"  - Estimated location (loc): {loc_exponential:.2f}")
+print(f"  - Estimated scale (scale): {scale_exponential:.2f}")
+
 
 
 
