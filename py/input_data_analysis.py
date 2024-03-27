@@ -25,14 +25,14 @@ p_exponential = expon.pdf(x, loc_exponential, scale_exponential)
 bin_sizes = [5, 10, 20, 25, 50]
 
 # Create subplots for histograms
-fig, axs = plt.subplots(2, 3, figsize=(16, 10))
+fig, axs = plt.subplots(1, 5, figsize=(20, 5))
 
 # Plot histograms with different bin sizes and fitted PDFs
 for i, bins in enumerate(bin_sizes):
     ax = axs.flatten()[i]
     ax.hist(df['data1'], bins=bins, density=True, color='red', edgecolor='black', alpha=0.6, label='Histogram')
     ax.plot(x, p_normal, 'k', linewidth=2, label='Fitted Normal PDF')
-    ax.plot(x, p_exponential, 'b--', linewidth=2, label='Fitted Exponential PDF')
+    ax.plot(x, p_exponential, 'g', linewidth=2, label='Fitted Exponential PDF')
     ax.set_title(f'Bin size = {bins}')
     ax.set_xlabel('Data 1')
     ax.set_ylabel('Density')
