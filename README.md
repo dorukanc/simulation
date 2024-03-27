@@ -8,6 +8,7 @@ This repository contains Python scripts for simulation exercises conducted in th
 2. [Parking Lot Simulation](#parking-lot-simulation)
 3. [Machine Failure and Repair Simulation](#machine-failure-and-repair-simulation)
 4. [Normal Distribution Simulation](#normal-distribution-simulation)
+5. [Input Data Analysis](#input-data-analysis)
 
 ---
 
@@ -37,6 +38,12 @@ The `sys_state_simulation.py` script simulates the failure and repair process of
 The `areaunderfunc_sim.py` script simulates the estimation of the area under a normal distribution curve using Monte Carlo simulation. It generates random points within a rectangle and calculates the ratio of points falling under the normal distribution curve to the total points. By multiplying this ratio by the area of the rectangle, it approximates the area under the curve. The script visualizes the points falling under the curve using Matplotlib.
 
 ![Alt text](https://raw.githubusercontent.com/dorukanc/simulation/main/imgs/pointsunderfunction.png)
+
+## Input Data Analysis
+
+This section provides an analysis of the input data using Python. It includes fitting the data to both normal and exponential distributions, plotting histograms with different bin sizes along with the fitted PDFs, displaying fitted parameters, and performing Kolmogorov-Smirnov tests for both distributions. The results are interpreted, including null hypotheses about the distribution of the data.
+
+![Alt text](https://raw.githubusercontent.com/dorukanc/simulation/main/imgs/input_data_analysis.png)
 
 
 Feel free to explore and utilize these scripts for simulation exercises in the IE304 Simulation class.
