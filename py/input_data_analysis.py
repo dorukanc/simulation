@@ -16,7 +16,7 @@ fig, axs = plt.subplots(1, 5, figsize=(16,5))
 
 
 for i, bins in enumerate(bin_sizes):
-    axs[i].hist(df['data1'], bins=bins, color='skyblue', edgecolor='black')
+    axs[i].hist(df['data1'], bins=bins, color='red', edgecolor='black')
     axs[i].set_title(f'Bin size = {bins}')
     axs[i].set_xlabel('Data 1')
     axs[i].set_ylabel('Frequency')
