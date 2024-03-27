@@ -4,7 +4,7 @@ from scipy import stats
 import pandas as pd
 
 
-df = pd.read_excel('../data/data.xlsx')
+df = pd.read_excel('../data/w6L2.xlsx')
 df.head()
 
 # Histogram of the dataset
